@@ -1,0 +1,206 @@
+.wrapper-store-layout {
+    background: var(--primary-bg);
+}
+
+.store-layout {
+    display: flex;
+    min-height: 100vh;
+    padding: 15px;
+    gap: 24px;
+
+    .layout-content {
+        max-width: 1136px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .content {
+            min-height: 100vh;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 1440px !important;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    @media (max-width: 768px) {
+        padding: 5px;
+        padding-top: 15px;
+    }
+}
+
+.store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-bg);
+    z-index: 99;
+    margin-bottom: 30px;
+
+    .time-range {
+        min-width: 210px;
+        height: 60px;
+        background: var(--secondary-bg);
+        box-shadow: 0px 2px 2px var(--primary-shadow);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            background: rgba(242, 97, 16, 0.07);
+            border-radius: 50px;
+            padding: 8px 20px;
+        }
+
+        .range {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+            color: #f26110;
+        }
+
+        .icon {
+            color: #f26110;
+        }
+    }
+
+    .balance {
+        min-width: 138px;
+        max-width: 160px;
+        height: 60px;
+        background: var(--secondary-bg);
+        box-shadow: 0px 2px 2px var(--primary-shadow);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 40px;
+            min-height: 40px;
+            background: var(--green);
+            border-radius: 50px;
+            color: #fff;
+        }
+
+        .amount {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+            color: var(--dark-blue-text);
+            white-space: nowrap;
+        }
+    }
+
+    .category-filter {
+        height: 60px;
+        background: var(--secondary-bg);
+        box-shadow: 0px 2px 2px var(--primary-shadow);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        gap: 8px;
+
+        .item {
+            padding: 11px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: -0.01em;
+            cursor: pointer;
+            border-radius: 10px;
+            color: #88887e;
+            white-space: nowrap;
+
+            &.active {
+                background: var(--green);
+                color: #fff;
+            }
+
+            &:hover {
+                background: var(--green);
+                color: #fff;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    top: 0;
+    position: sticky;
+    max-width: 100%;
+    padding: 17px 0;
+    background: var(--secondary-bg);
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    box-shadow: 2px 0px 2px var(--primary-shadow);
+    color: var(--black);
+
+    .left {
+        display: flex;
+        gap: 16px;
+
+        .burger-btn {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        color: var(--menu-icon);
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .active {
+            color: var(--green);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+    }
+}
+
+.mobile-menu {
+    width: 325px !important;
+
+    .offcanvas-body {
+        padding: 34px;
+        padding-top: 0;
+    }
+}

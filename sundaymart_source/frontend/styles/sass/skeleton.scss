@@ -1,0 +1,113 @@
+.store_item {
+    &.skeleton {
+        .logo {
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: skeleton-loading 1s linear infinite alternate;
+        }
+
+        .title {
+            width: 50%;
+            height: 0.5rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+            border-radius: 0.125rem;
+            animation: skeleton-loading 1s linear infinite alternate;
+        }
+
+        .short_description {
+            width: 90%;
+            min-height: 1rem;
+            margin-bottom: 0.55rem;
+            border-radius: 0.125rem;
+            opacity: 0.7;
+            animation: skeleton-loading 1s linear infinite alternate;
+
+            &:nth-child(6) {
+                width: 60%;
+            }
+        }
+
+        .footer {
+            animation: skeleton-loading 1s linear infinite alternate;
+
+            .time,
+            .score {
+                width: 30%;
+                height: 0.5rem;
+                opacity: 0.7;
+                border-radius: 0.125rem;
+            }
+        }
+    }
+}
+
+.product-card {
+    &.skeleton {
+        width: calc((100% - 208px) / 5);
+        padding: 5px 0;
+        border-radius: 10px;
+        position: relative;
+
+        .product-img {
+            position: relative;
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+            height: 131px;
+            opacity: 0.7;
+            margin: 0 auto;
+            margin-top: 12px;
+            animation: skeleton-loading 1s linear infinite alternate;
+        }
+
+        .product-name {
+            width: 100%;
+            height: 0.5rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+            border-radius: 0.125rem;
+            margin-top: 16px;
+            animation: skeleton-loading 1s linear infinite alternate;
+
+            &:last-child {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 375px) {
+            width: 100%;
+        }
+
+        @media (min-width: 375px) and (max-width: 512px) {
+            width: calc((100% - 30px) / 2);
+        }
+
+        @media (min-width: 512px) and (max-width: 912px) {
+            width: calc((100% - 60px) / 3);
+        }
+
+        @media (min-width: 912px) and (max-width: 1024px) {
+            width: calc((100% - 90px) / 4);
+        }
+    }
+}
+
+.store-loading {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(220, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(220, 20%, 95%);
+    }
+}

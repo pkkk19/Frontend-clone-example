@@ -1,0 +1,278 @@
+.sider {
+    width: 250px;
+    min-height: 100vh;
+
+    .sider-header {
+        width: 250px;
+        height: 60px;
+        background: var(--secondary-bg);
+        box-shadow: 0px 2px 2px var(--primary-shadow);
+        border-radius: 10px;
+        margin-bottom: 8px;
+        display: flex;
+        gap: 23px;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 23px;
+        z-index: 2;
+
+        .burger-btn {
+            margin-top: -2px;
+            cursor: pointer;
+            color: var(--dark-blue-text);
+        }
+
+        a {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -1px;
+            color: var(--dark-blue-text);
+        }
+    }
+
+    .sider-content {
+        margin-top: 8px;
+        display: block;
+        width: 100%;
+        min-height: calc(100vh - 98px);
+        background: var(--secondary-bg);
+        box-shadow: 2px 0px 2px var(--primary-shadow);
+        border-radius: 10px;
+        padding: 37px 34px 34px 34px;
+    }
+
+    .user-box {
+        height: 350px;
+
+        .img-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .setting,
+            .notification {
+                cursor: pointer;
+                color: var(--menu-icon);
+
+                &.active {
+                    color: var(--green);
+                }
+            }
+
+            .avatar {
+                width: 64px;
+                height: 64px;
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .name-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 25px;
+
+            .name {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 116.3%;
+                letter-spacing: -0.01em;
+                color: var(--black);
+            }
+
+            .phone {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 116.3%;
+                letter-spacing: -0.01em;
+                color: var(--black);
+            }
+        }
+
+        .wallet-balance {
+            min-width: 181px;
+            height: 84px;
+            background: rgba(192, 194, 204, 0.07);
+            border: 1px solid rgba(0, 0, 0, 0.021);
+            border-radius: 10px;
+            padding: 19px 16px 19px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3px;
+
+            .title {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: -0.4px;
+                color: var(--black);
+                margin-bottom: 6px;
+            }
+
+            .balance {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.4px;
+                color: var(--black);
+                display: inline-block;
+                width: 110px;
+                white-space: nowrap;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+            }
+
+            .plus-icon {
+                color: var(--green);
+                cursor: pointer;
+            }
+        }
+
+        .share-wallet {
+            min-width: 181px;
+            height: 40px;
+            background: rgba(242, 97, 16, 0.07);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+            gap: 12px;
+            cursor: pointer;
+
+            .icon {
+                color: #f26110;
+                font-size: 24px;
+            }
+
+            .name {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 116.3%;
+                letter-spacing: -0.01em;
+                color: #f26110;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.user {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &:hover {
+        .dropdown {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+    }
+
+    .avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 19px;
+        color: #fff;
+        border-radius: 10px;
+        background: var(--green);
+    }
+
+    .dropdown {
+        overflow: hidden;
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 110%;
+        width: 224px;
+        min-height: 216px;
+        background: var(--secondary-bg);
+        box-shadow: 0px 10px 50px var(--primary-box-shadow);
+        border-radius: 15px;
+        transition: all ease 0.3s;
+        opacity: 0;
+        z-index: 4;
+        padding: 0;
+        padding-top: 15px;
+        border: 1px solid var(--summary-border);
+
+        .dropdown-items {
+            display: block;
+
+            .dropdown-item {
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 12px 24px;
+                gap: 16px;
+
+                svg {
+                    color: var(--black);
+                }
+
+                .label {
+                    font-family: "Inter", sans-serif !important;
+                }
+
+                .label a {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: var(--black);
+                    text-decoration: none;
+                    font-family: "Inter", sans-serif !important;
+                }
+
+                .suffix {
+                    position: absolute;
+                    right: 24px;
+                    width: 38px;
+                    height: 24px;
+                    background: #83ea00;
+                    border-radius: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+
+                &:hover {
+                    background: var(--card-bg);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

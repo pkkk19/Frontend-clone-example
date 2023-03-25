@@ -1,0 +1,119 @@
+.ticket-wrapper {
+    display: block;
+    width: 100%;
+
+    .ticket-btn {
+        width: 250px;
+        height: 150px;
+        background-color: var(--secondary-bg);
+        margin: 0 auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        margin: 3rem auto;
+        transition: all ease 300ms;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .ticket-table {
+        padding: 20px;
+        border-radius: 10px;
+        background: var(--secondary-bg);
+        box-shadow: 2px 0px 2px var(--primary-shadow);
+
+        thead {
+            tr {
+                border-bottom: none;
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid var(--summary-border);
+            padding: 15px 0;
+
+            th,
+            td {
+                padding: 1rem;
+                color: var(--black);
+            }
+        }
+    }
+}
+
+.ticket-modal {
+    .modal-body {
+        .form-item {
+            margin: 0 !important;
+        }
+
+        padding: 20px !important;
+    }
+}
+
+.ticket-detail {
+    .card-header {
+        background: none;
+    }
+
+    .ticket-id {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 116.3%;
+        letter-spacing: -0.01em;
+        color: var(--black);
+    }
+
+    .muted-text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: var(--secondary-text);
+    }
+
+    .pad-top {
+        .list-group-item {
+            background: var(--secondary-bg);
+            color: var(--secondary-text);
+        }
+
+        .media {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .avatar {
+                display: flex;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+            }
+
+            .media-body {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--black);
+        }
+    }
+}

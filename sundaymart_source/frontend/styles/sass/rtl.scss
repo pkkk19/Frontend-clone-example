@@ -1,0 +1,42 @@
+[dir="rtl"] {
+    .single-store-banner {
+        .banner-icon {
+            right: 18px;
+        }
+
+        .together-order {
+            left: 15%;
+            max-width: max-content;
+            right: auto;
+        }
+    }
+
+    .select-address {
+        .arrow-down {
+            left: 12px;
+            right: auto;
+        }
+    }
+
+    .interface {
+        .suffix {
+            left: 20px;
+            right: auto;
+        }
+    }
+
+    .option {
+        .option-item {
+            justify-content: space-between;
+            flex-direction: row-reverse;
+
+        }
+    }
+
+    .modal-header {
+        button {
+            margin: unset;
+        }
+    }
+
+}
